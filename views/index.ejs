@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>free joke website</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>select what catogries and what type of flags </h1>
+        <form action="/" id="form" class="form" method="POST">
+            <label>categories:</label>
+            <div class="d-flex gap-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="categories" value="programming"
+                        id="programming">
+                    <label class="form-check-label" for="programming">programming</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="categories" value="misc" id="misc">
+                    <label class="form-check-label" for="misc">misc</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="categories" value="dark" id="dark">
+                    <label class="form-check-label" for="dark">dark</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="categories" value="pun" id="pun">
+                    <label class="form-check-label" for="pun">pun</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="categories" value="spooky" id="spooky">
+                    <label class="form-check-label" for="spooky">spooky</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="categories" value="chrismas" id="chrismas">
+                    <label class="form-check-label" for="chrismas">chrismas</label>
+                </div>
+            </div>
+
+            <label>flags :</label>
+            <div class="d-flex gap-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flags" value="nsfw" id="nsfw">
+                    <label class="form-check-label" for="nsfw">nsfw</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flags" value="religious" id="religious">
+                    <label class="form-check-label" for="religious">religious</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flags" value="political" id="political">
+                    <label class="form-check-label" for="political">political</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flags" value="racist" id="racist">
+                    <label class="form-check-label" for="racist">racist</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flags" value="sexist" id="sexist">
+                    <label class="form-check-label" for="sexist">sexist</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flags" value="explicit" id="explicit">
+                    <label class="form-check-label" for="explicit">explicit</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">get joke</button>
+        </form>
+        <br />
+        
+        <br />
+        <% if (joke) { %>
+            <h2>Joke:</h2>
+            <% if (filters) { %><h6 class="text-secondary">Current joke filters: <%= filters%></h6><% } %>
+            <p>
+                <%= joke%>
+            </p>
+        <% } %>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+                    crossorigin="anonymous"></script>
+</body>
+
+</html>
